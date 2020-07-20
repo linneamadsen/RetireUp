@@ -2,11 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import AppLinnea from './LinneaTest';
+import SP500 from './SP500';
 import * as serviceWorker from './serviceWorker';
 
+const name = "Linnea Madsen";
+
 ReactDOM.render(
+
   <React.StrictMode>
-    <App />
+    {/*<App /> */ }
+    {/*<AppLinnea />*/}
+    <SP500 />
   </React.StrictMode>,
   document.getElementById('root')
 );

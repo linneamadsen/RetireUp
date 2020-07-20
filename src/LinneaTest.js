@@ -2,14 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function AppLinnea() {
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className="AppLinnea">
+      <header>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          linnealinnea
         </p>
         <a
           className="App-link"
@@ -17,11 +16,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          this part is blue
+          Learn React linnea
         </a>
       </header>
     </div>
   );
 }
 
-export default App;
+export default AppLinnea;
