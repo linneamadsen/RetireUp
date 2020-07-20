@@ -36,8 +36,7 @@ function SP500() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Hi bb how are you?!!??!!
-        </a>
+July 19        </a>
       </header>
     </div>
   );
