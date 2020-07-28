@@ -3,17 +3,25 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import AppLinnea from './LinneaTest';
+import Slider from './slider';
+import Range from './slider';
 import SP500 from './SP500';
 import * as serviceWorker from './serviceWorker';
 
-const name = "Linnea Madsen";
+
 
 ReactDOM.render(
 
   <React.StrictMode>
-    {/*<App /> */ }
+    <Slider />
+
+
+    {/*<App /> */}
     {/*<AppLinnea />*/}
+
     <SP500 />
+
+    {/*<Test />*/}
   </React.StrictMode>,
   document.getElementById('root')
 );
