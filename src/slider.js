@@ -1,4 +1,3 @@
-
 import 'rc-tooltip/assets/bootstrap.css';
 import 'rc-slider/assets/index.css';
 import React from 'react';
@@ -6,34 +5,26 @@ import Tooltip from 'rc-tooltip';
 import Slider from 'rc-slider';
 import SP500 from './SP500';
 
-const { createSliderWithTooltip } = Slider;
-const Range = createSliderWithTooltip(Slider.Range);
-const { Handle } = Slider;
+function findRange(){
 
-const handle = props => {
-  const { value, dragging, index, ...restProps } = props;
-  return (
-    <Tooltip
-      prefixCls="rc-slider-tooltip"
-      overlay={value}
-      visible={dragging}
-      placement="top"
-      key={index}
-    >
-      <Handle value={value} {...restProps} />
-    </Tooltip>
-  );
+  let range = {
+    minRange: 1926,
+    maxRange: 2020
+  }
+  range.minRange = document.querySelector("#minyear")
+  range.maxRange = document.querySelector("#maxyear")
+  console.log(range)
 };
-
-const wrapperStyle = { width: 400, margin: 50 };
-var x = 8;
-
 
 export default () => (
   <div>
-    <div style={wrapperStyle}>
-      <p>Select Range</p>
-      <Range min={0} max={20} defaultValue={[3, 10]} tipFormatter={value => `${value}%`} />
+    <div>
+      <p>Select Year</p>
+      <form class="multi-range-field my-5 pb-5">
+        <input type="number" placeholder="minyear" value = "1926" id="minyear" />
+        <input type="number" placeholder="maxyear" value = "2020" id="maxyear" />
+        <input type="submit" onClick={findRange()} />
+      </form>
     </div>
   </div>
 );

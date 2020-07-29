@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import './index.css';
+import './App.css';
 import Slider from './slider';
 import Range from './slider';
 import 'rc-tooltip/assets/bootstrap.css';
@@ -121,21 +123,17 @@ class SP500 extends Component {
     }
 
      renderTableData() {
-
+       let cumulative_calculated = 0
 
        return this.state.sp500data.map((rowofdata, index) => {
           const { Year, amount, cumulative } = rowofdata
-
-
+          cumulative_calculated += amount
 
           return (
-
-
              <tr key={Year}>
                 <td>{Year}</td>
                 <td>{amount}</td>
-                <td>{cumulative}</td>
-
+                <td>{Number.parseFloat(cumulative_calculated).toFixed(2)}</td>
              </tr>
           )
        })
@@ -146,10 +144,10 @@ class SP500 extends Component {
     return (
 
       <div>
-            <h1 id='title'>S&P 500 Total Returns by Year</h1>
+            <h1 className="SP500">S&P 500 Total Returns by Year</h1>
             <table id='students'>
                <tbody>
-                  <tr>{this.renderTableHeader()}</tr>
+                  <tr >{this.renderTableHeader()}</tr>
                   {this.renderTableData()}
                </tbody>
             </table>
