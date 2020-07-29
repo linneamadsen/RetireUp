@@ -13,6 +13,27 @@ body {
   font-weight: lighter;
 }
 
+.SP500-column-header{
+  text-transform: capitalize;
+  font-family: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+  font-size: 0.9375rem;
+  color: #373a3c;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 50px;
+}
+
+.table {
+    border-collapse: separate;
+    border-spacing: 2px;
+  }
+
+.td {
+  padding-top: 12pt;
+  padding-right: 12pt;
+  padding-left: 12pt;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

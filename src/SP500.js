@@ -118,7 +118,7 @@ class SP500 extends Component {
 
        let header = Object.keys(this.state.sp500data[0])
        return header.map((key, index) => {
-          return <th key={index}>{key.toUpperCase()}</th>
+          return <th key={index}>{key}</th>
        })
     }
 
@@ -129,25 +129,32 @@ class SP500 extends Component {
           const { Year, amount, cumulative } = rowofdata
           cumulative_calculated += amount
 
+
+
           return (
              <tr key={Year}>
-                <td>{Year}</td>
-                <td>{amount}</td>
-                <td>{Number.parseFloat(cumulative_calculated).toFixed(2)}</td>
+                <td className="td">{Year}</td>
+                <td className="td">{amount}</td>
+                <td className="td">{Number.parseFloat(cumulative_calculated).toFixed(2)}</td>
              </tr>
           )
        })
     }
 
+  // renderTableDataColor(){
+  //   var el = document.getElementById(linnea);
+  //   el.style.color = "red";
+  // }
   render () {
 
     return (
 
       <div>
             <h3 className="SP500-header">S&P 500 Total Returns by Year</h3>
-            <table id='students'>
+            <table className="table" id='students'>
+            // <p id="linnea">testing text here</p>
                <tbody>
-                  <tr >{this.renderTableHeader()}</tr>
+                  <tr className="SP500-column-header">{this.renderTableHeader()}</tr>
                   {this.renderTableData()}
                </tbody>
             </table>
