@@ -144,7 +144,7 @@ class SP500 extends Component {
     return (
 
       <div>
-            <h1 className="SP500">S&P 500 Total Returns by Year</h1>
+            <h3 className="SP500-header">S&P 500 Total Returns by Year</h3>
             <table id='students'>
                <tbody>
                   <tr >{this.renderTableHeader()}</tr>

@@ -1,9 +1,16 @@
+body {
+  margin-left: 50px;
+}
+
 .App {
   text-align: center;
 }
 
-.SP500 {
-  color: yellow;
+.SP500-header {
+  color: #444444;
+  font-size: 1.640625rem;
+  font-family: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+  font-weight: lighter;
 }
 
 .App-logo {
